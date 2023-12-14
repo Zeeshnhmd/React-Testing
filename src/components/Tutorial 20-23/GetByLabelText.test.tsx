@@ -17,4 +17,13 @@ test('Label renders Correctly', () => {
 		selector: 'input',
 	});
 	expect(labelElement2).toBeInTheDocument();
+
+	const placeHolderText = screen.getByPlaceholderText('Bio');
+	expect(placeHolderText).toBeInTheDocument();
+
+	const getbytext = screen.getByText('All Elements are mandatory');
+	expect(getbytext).toBeInTheDocument();
+
+	const getByDisplayValue = screen.getByDisplayValue('Zeeshan');
+	expect(getByDisplayValue).toBeInTheDocument();
 });
